@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int multiplyRecursive(int *n)
+{
+    if (*n == 1)
+        return 1;
+
+    int x = *n;
+    (*n)--;
+
+    return x * multiplyRecursive(n);
+}
+
+int main()
+{
+    int num = 5;
+    int *ptr = &num;
+
+    int result = multiplyRecursive(ptr);
+
+    printf("Product of first 5 numbers = %d\n", result);
+
+    return 0;
+}
+
